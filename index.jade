@@ -1,0 +1,56 @@
+doctype
+html
+head
+    title Easy Note
+    link(rel="stylesheet", href="css/app.css")
+body
+    .add-memo#add-memo-mobile
+        .add-memo__icon
+            span.pe-7s-note
+    .top-bar
+        .window-controls
+            .window-controls__control.window-controls__control--red
+            .window-controls__control.window-controls__control--yellow
+            .window-controls__control.window-controls__control--blue
+    .flex-container
+        .sidebar
+            .sidebar-top
+                .sidebar__icon#new-memo-btn
+                    span.pe-7f-note
+                //- .sidebar__icon
+                //-     span.pe-7s-alarm
+                //- .sidebar__icon
+                //-     span.pe-7f-download
+            .sidebar-bottom
+                //- .sidebar__icon
+                //-     span.pe-7f-trash
+                .sidebar__icon
+                    a.sidebar__icon--link.pe-7s-settings(href="https://github.com/darrionramdin/easy-note")
+
+        .main
+            .container
+                .memos
+                   
+
+        .memo-input#new-memo-window
+            .memo-input__container
+                textarea.memo-input__textarea#new-memo-content(placeholder="Type something here..." name="newMemo", cols="30", rows="10")
+                .memo-input__buttons
+                    span(href="#").memo-input__buttons--submit#add-memo
+                        span.pe-7s-plus
+                    span(href="#").memo-input__buttons--cancel#cancel-memo
+                        span.pe-7s-close-circle
+                    
+
+
+        //- .category-sidebar
+        //-     ul.category-sidebar-list
+        //-         li.category-sidebar-list__item.category-sidebar-list__item--active  All
+        //-         li.category-sidebar-list__item  Grocery
+        //-         li.category-sidebar-list__item  Project
+        //-         li.category-sidebar-list__item  Books
+        //-         li.category-sidebar-list__item  Urgent
+        //-         li.category-sidebar-list__item  Important
+
+    script(src="js/jquery-3.2.1.min.js")
+    script(src="js/app.js")

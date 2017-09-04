@@ -1,0 +1,209 @@
+.memo {
+    width: 270px;
+    height: 250px;
+    background: #f8f8f8;
+    box-shadow: 1px 4px 8px #D7D7D7;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+
+    &__content {
+        margin: 30px 25px;
+        height: 100%;
+        line-height: 25px;
+        color: #72728d;
+
+        &--fade {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+        }
+
+        &__options {
+            display: flex;
+            height: 100%;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 10px;
+            font-size: 25px;
+            
+        }
+
+        &__option {
+            color: #727272;
+            opacity: 0.4;
+            cursor: pointer;
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.add-memo {
+    width: 70px;
+    height: 70px;
+    background: #fcdd8d;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+    margin-bottom: 50px;
+    margin-right: 60px;
+    box-shadow: 1px 4px 20px #B9B9B9;
+    cursor: pointer;
+    z-index: 999;
+
+    &__icon {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: white;
+    }
+
+    &--inactive {
+        opacity: 0;
+    }   
+}
+
+
+.memo-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: none;
+    
+    &__container {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 500px;
+        background:#f8f8f8;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 4px 20px #B9B9B9;
+    }
+
+    &__textarea {
+        padding: 10px 0;
+        width: 95%;
+        height: 90%;
+        font-size: 22px;
+        background-color: #f8f8f8;
+        border: 0;
+        font-family: 'Open Sans', sans-serif;
+        resize: none;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    &__buttons {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        &--submit {
+            flex: 1;
+            height: 100%;
+            text-align: center;
+            text-decoration: none;
+            font-size: 30px;
+            color: #727272;
+            opacity: 0.4;
+            padding-top: 5px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &--cancel {
+            flex: 1;
+            height: 100%;
+            text-align: center;
+            text-decoration: none;
+            font-size: 30px;
+            color: #727272;
+            opacity: 0.4;
+            padding-top: 5px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+}
+
+
+.memo-expanded {
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    .memo__content {
+        width: 50%;
+        // height: 100%;
+        margin: 0 25px 0 25px;
+        // margin: 0;
+        
+        // align-items: center;
+        // justify-content: center;
+        padding: 50px 0;
+        overflow: auto;
+
+
+        &__options {
+            font-size: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .add-memo {
+        display: block;
+    }
+
+    .memo-input {
+        
+    
+        &__container {
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+        }
+    }
+
+    .memo-expanded {
+        .memo__content {
+            width: 80%;
+        }
+    }
+    
+}

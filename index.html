@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+  <title>Easy Note</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="add-memo-mobile" class="add-memo">
+    <div class="add-memo__icon"><span class="pe-7s-note"></span></div>
+  </div>
+  <div class="top-bar">
+    <div class="window-controls">
+      <div class="window-controls__control window-controls__control--red"></div>
+      <div class="window-controls__control window-controls__control--yellow"></div>
+      <div class="window-controls__control window-controls__control--blue"></div>
+    </div>
+  </div>
+  <div class="flex-container">
+    <div class="sidebar">
+      <div class="sidebar-top">
+        <div id="new-memo-btn" class="sidebar__icon"><span class="pe-7f-note"></span></div>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="sidebar__icon"><a href="https://github.com/darrionramdin/easy-note" class="sidebar__icon--link pe-7s-settings"></a></div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="container">
+        <div class="memos"></div>
+      </div>
+    </div>
+    <div id="new-memo-window" class="memo-input">
+      <div class="memo-input__container">
+        <textarea id="new-memo-content" placeholder="Type something here..." name="newMemo" cols="30" rows="10" class="memo-input__textarea"></textarea>
+        <div class="memo-input__buttons"><span href="#" id="add-memo" class="memo-input__buttons--submit"><span class="pe-7s-plus"></span></span><span href="#" id="cancel-memo" class="memo-input__buttons--cancel"><span class="pe-7s-close-circle"></span></span></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
